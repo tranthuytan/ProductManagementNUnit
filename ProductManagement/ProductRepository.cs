@@ -13,6 +13,7 @@ namespace ProductManagement
         Regex regex = new Regex(@"[0-9?=,.:;-\\s]+");
         string cs=@"Server=DESKTOP-HPMUS7S\SQLEXPRESS; Database=PRN_ProductDB; User Id=sa; Password=thuytan123";
         SqlConnection conn;
+        DateTime now = DateTime.Now;
         public void Create(Product entity)
         {
             if (entity.Name.Trim().Equals("") || entity.Name.Length > 50)

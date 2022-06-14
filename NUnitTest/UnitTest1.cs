@@ -6,14 +6,9 @@ namespace NUnitTest
 {
     public class Tests
     {
-        private Product? product=null;
-        private ProductRepository productRepo;
-        [SetUp]
-        public void Setup()
-        {
-            productRepo = new ProductRepository();
-            Product product = new Product();
-        }
+        ProductRepository productRepo = new ProductRepository();
+        Product product = new Product();
+
         [Test]
         public void GetByIdTest_GetProduct()
         {
@@ -25,7 +20,7 @@ namespace NUnitTest
             product.Status = 1;
             product.CategoryId = 1;
             //Act
-            var dbProduct = productRepo.GetById(product.Id);
+            var dbProduct = productRepo.GetById(12);
 
             //Expectation: dbProduct == product
             Assert.AreEqual(product.Id, dbProduct.Id);
@@ -50,17 +45,19 @@ namespace NUnitTest
 
         }
         [Test]
-        public void CreateProductTest()
+        public void CreateProductTest_Success()
         {
             //Assign
             //database id: int identity
+            product.Id = 24;
             product.Name = "revive lemon salt";
             product.CreateDate = new DateTime(2022, 6, 13);
             product.Price = 15000;
             product.Status = 1;
             product.CategoryId = 1;
             //Act
-            int id = 140;
+            productRepo.Create(product);
+            int id = product.Id;
             var dbProduct = productRepo.GetById(id);
             //Expectation 1: product is not null
             Assert.IsNotNull(dbProduct);
@@ -77,7 +74,6 @@ namespace NUnitTest
         {
             //Assign
             //database id: int identity
-            product = new Product();
             product.Id = 14;
             product.Name = "          ";
             product.CreateDate = new DateTime(2022, 6, 13);
@@ -86,6 +82,10 @@ namespace NUnitTest
             product.CategoryId = 1;
 
             var ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
+            Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characters"));
+
+            product.Name = "asdiaioshd iashdioashoiashdoiashdoia haoisdhaoishdaosihdaisohd aoisdhaoi";
+            ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
             Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characters"));
         }
         [Test]
@@ -119,13 +119,13 @@ namespace NUnitTest
                 Price = 1000,
                 CreateDate = dt,
                 Status = 1,
-                CategoryId = 0,
+                CategoryId = 1,
 
             };
             if (pro.Name.IndexOfAny(invalidCharacters) >= 0)
             {
 
-                var argumentException = Assert.Throws<ArgumentException>(() => productRepo.Create());
+                var argumentException = Assert.Throws<ArgumentException>(() => productRepo.Create(pro));
                 Assert.That(argumentException.Message, Is.EqualTo("Invalid characters"));
             }
 
