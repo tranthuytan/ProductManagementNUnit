@@ -11,7 +11,7 @@ namespace ProductManagement
     public class ProductRepository
     {
         char[] invalidCharacters = "`~!@#$%^&*()_+=0123456789<>,.?/\\|{}[]'\"".ToCharArray();
-        string cs =@"Server=DESKTOP-HPMUS7S\SQLEXPRESS; Database=PRN_ProductDB; User Id=sa; Password=thuytan123";
+        string cs = @"Server=DESKTOP-HPMUS7S\SQLEXPRESS; Database=PRN_ProductDB1; User Id=sa; Password=thuytan123";
         SqlConnection conn;
         DateTime now = DateTime.Now;
         public void Create(Product entity)
@@ -20,7 +20,7 @@ namespace ProductManagement
                 throw new ArgumentException("The name must have [1,50] characters");
             if (entity.Name.IndexOfAny(invalidCharacters) >= 0)
                 throw new ArgumentException("Invalid characters");
-            if (entity.CreateDate.Date>now)
+            if (entity.CreateDate.Date > now)
                 throw new ArgumentException("The date must not exceed today");
             if (entity.Price < 0)
                 throw new ArgumentException("Price must larger than 0");
@@ -75,7 +75,5 @@ namespace ProductManagement
                 throw;
             }
         }
-
-       
     }
 }
