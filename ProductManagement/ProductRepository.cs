@@ -1,25 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ProductManagement
 {
-    public class ProductRepository : IRepository<Product>
+    public class ProductRepository
     {
-        Regex regex = new Regex(@"[0-9?=,.:;-\\s]+");
-        string cs=@"Server=DESKTOP-HPMUS7S\SQLEXPRESS; Database=PRN_ProductDB; User Id=sa; Password=thuytan123";
+        char[] invalidCharacters = "`~!@#$%^&*()_+=0123456789<>,.?/\\|{}[]'\"".ToCharArray();
+        string cs =@"Server=DESKTOP-HPMUS7S\SQLEXPRESS; Database=PRN_ProductDB; User Id=sa; Password=thuytan123";
         SqlConnection conn;
         DateTime now = DateTime.Now;
         public void Create(Product entity)
         {
             if (entity.Name.Trim().Equals("") || entity.Name.Length > 50)
                 throw new ArgumentException("The name must have [1,50] characters");
-            //if (Match.Success)
-            //    throw new ArgumentException("The name must not have special characters");
+            if (entity.Name.IndexOfAny(invalidCharacters) >= 0)
+                throw new ArgumentException("Invalid characters");
+            if (entity.CreateDate.Date>now)
+                throw new ArgumentException("The date must not exceed today");
+            if (entity.Price < 0)
+                throw new ArgumentException("Price must larger than 0");
+
             try
             {
                 conn = new SqlConnection(cs);
@@ -34,7 +39,6 @@ namespace ProductManagement
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.StackTrace);
                 throw;
             }
         }
@@ -60,8 +64,7 @@ namespace ProductManagement
                         Status = (int)rs["Status"],
                         CategoryId = (int)rs["CategoryId"]
                     };
-                    if (Pd != null)
-                        return Pd;
+                    return Pd;
                 }
                 conn.Close();
                 return null;
@@ -69,9 +72,10 @@ namespace ProductManagement
             }
             catch (Exception e)
             {
-
                 throw;
             }
         }
+
+       
     }
 }

@@ -70,7 +70,7 @@ namespace NUnitTest
             Assert.AreEqual(product.CategoryId, dbProduct.CategoryId);
         }
         [Test]
-        public void CreateProductTest_NameException()
+        public void CreateProductTest_NameRangeArgumentException()
         {
             //Assign
             //database id: int identity
@@ -82,30 +82,30 @@ namespace NUnitTest
             product.CategoryId = 1;
 
             var ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
-            Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characters"));
+            Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characterss"));
 
             product.Name = "asdiaioshd iashdioashoiashdoiashdoia haoisdhaoishdaosihdaisohd aoisdhaoi";
             ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
-            Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characters"));
+            Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characterss"));
         }
         [Test]
-        public void CreateProductTest_NameRegexException()
+        public void CreateProductTest_DateOutOfRange()
         {
             //Assign
             //database id: int identity
             product = new Product();
             product.Id = 14;
-            product.Name = "01823hsevenup,.;324-";
-            product.CreateDate = new DateTime(2022, 6, 13);
+            product.Name = "cafe lon";
+            product.CreateDate = new DateTime(2022, 6, 18);
             product.Price = 15000;
             product.Status = 1;
             product.CategoryId = 1;
 
             var ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
-            Assert.That(ex.Message, Is.EqualTo("The name must not have special characters"));
+            Assert.That(ex.Message, Is.EqualTo("The date must not exceed today"));
         }
         [Test]
-        public void TestCreated_GetArgumentException()
+        public void CreateProductTest_NameSpecialCharacterException()
         {
             char[] invalidCharacters = "`~!@#$%^&*()_+=0123456789<>,.?/\\|{}[]'\"".ToCharArray();
             Boolean valid = true;
