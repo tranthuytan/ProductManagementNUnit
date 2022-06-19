@@ -19,11 +19,11 @@ namespace ProductManagement
             if (entity.Name.Trim().Equals("") || entity.Name.Length > 50)
                 throw new ArgumentException("The name must have [1,50] characters");
             if (entity.Name.IndexOfAny(invalidCharacters) >= 0)
-                throw new ArgumentException("Invalid characters");
+                throw new ArgumentException("The name has invalid characters");
             if (entity.CreateDate.Date>now)
                 throw new ArgumentException("The date must not exceed today");
             if (entity.Price < 0)
-                throw new ArgumentException("Price must larger than 0");
+                throw new ArgumentException("The price must larger than or equal 0");
 
             try
             {
@@ -76,6 +76,42 @@ namespace ProductManagement
             }
         }
 
-       
+        public Product GetByName(string Name)
+        {
+            try
+            {
+                if (Name.Trim().Equals("") || Name.Length > 50)
+                    throw new ArgumentException("The name must have [1,50] characters");
+                if (Name.IndexOfAny(invalidCharacters) >= 0)
+                    throw new ArgumentException("The name has invalid characters");
+
+                SqlConnection conn = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("select Id,Name,CreateDate,Price,Status,CategoryId from Product WHERE Name LIKE @name AND Status=1", conn);
+                cmd.Parameters.AddWithValue("@name", "%"+ Name.ToLower().Trim() + "%");
+                conn.Open();
+                var rs = cmd.ExecuteReader();
+                rs.Read();
+                if (rs.HasRows)
+                {
+                    Product Pd = new Product()
+                    {
+                        Id = (int)rs["Id"],
+                        Name = (string)rs["Name"],
+                        CreateDate = (DateTime)rs["CreatedDate"],
+                        Price = (double)rs["Price"],
+                        Status = (int)rs["Status"],
+                        CategoryId = (int)rs["CategoryId"]
+                    };
+                    return Pd;
+                }
+                conn.Close();
+                return null;
+
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
     }
 }
