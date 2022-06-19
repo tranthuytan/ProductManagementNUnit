@@ -11,7 +11,7 @@ namespace ProductManagement
     public class ProductRepository
     {
         char[] invalidCharacters = "`~!@#$%^&*()_+=0123456789<>,.?/\\|{}[]'\"".ToCharArray();
-        string cs =@"Server=DESKTOP-HPMUS7S\SQLEXPRESS; Database=PRN_ProductDB; User Id=sa; Password=thuytan123";
+        string cs = @"Server=DESKTOP-HPMUS7S\SQLEXPRESS; Database=PRN_ProductDB1; User Id=sa; Password=thuytan123";
         SqlConnection conn;
         DateTime now = DateTime.Now;
         public void Create(Product entity)

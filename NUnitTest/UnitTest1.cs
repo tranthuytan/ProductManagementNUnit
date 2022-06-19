@@ -49,9 +49,9 @@ namespace NUnitTest
         {
             //Assign
             //database id: int identity
-            product.Id = 24;
-            product.Name = "revive lemon salt";
-            product.CreateDate = new DateTime(2022, 6, 13);
+            product.Id = 3;
+            product.Name = "Revive";
+            product.CreateDate = new DateTime(2022, 6, 14);
             product.Price = 15000;
             product.Status = 1;
             product.CategoryId = 1;
@@ -82,11 +82,11 @@ namespace NUnitTest
             product.CategoryId = 1;
 
             var ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
-            Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characterss"));
+            Assert.That("The name must have [1,50] characters", Is.EqualTo(ex.Message));
 
             product.Name = "asdiaioshd iashdioashoiashdoiashdoia haoisdhaoishdaosihdaisohd aoisdhaoi";
             ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
-            Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characterss"));
+            Assert.That("The name must have [1,50] characterss", Is.EqualTo(ex.Message));
         }
         [Test]
         public void CreateProductTest_DateOutOfRange()
@@ -102,7 +102,7 @@ namespace NUnitTest
             product.CategoryId = 1;
 
             var ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
-            Assert.That(ex.Message, Is.EqualTo("The date must not exceed today"));
+            Assert.That("The date must not exceed today", Is.EqualTo(ex.Message));
         }
         [Test]
         public void CreateProductTest_NameSpecialCharacterException()
@@ -126,7 +126,7 @@ namespace NUnitTest
             {
 
                 var argumentException = Assert.Throws<ArgumentException>(() => productRepo.Create(pro));
-                Assert.That(argumentException.Message, Is.EqualTo("Invalid characters"));
+                Assert.That("Invalid characters", Is.EqualTo(argumentException.Message));
             }
         }
         [Test]
