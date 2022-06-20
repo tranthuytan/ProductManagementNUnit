@@ -10,3 +10,15 @@ C:\Users\PC\OneDrive\Máy tính\Coding Dreams\SWT\software-testing-master\SWT_Pr
 C:\Users\PC\OneDrive\Máy tính\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.dll
 C:\Users\PC\OneDrive\Máy tính\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ref\ProductManagement.dll
 C:\Users\PC\OneDrive\Máy tính\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.pdb
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ProductManagement.deps.json
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ProductManagement.dll
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ProductManagement.pdb
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.AssemblyInfo.cs
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.dll
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\refint\ProductManagement.dll
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.pdb
+C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ref\ProductManagement.dll

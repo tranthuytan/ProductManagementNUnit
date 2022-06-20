@@ -87,7 +87,7 @@ namespace ProductManagement
 
                 SqlConnection conn = new SqlConnection(cs);
                 SqlCommand cmd = new SqlCommand("select Id,Name,CreateDate,Price,Status,CategoryId from Product WHERE Name LIKE @name AND Status=1", conn);
-                cmd.Parameters.AddWithValue("@name", "%"+ Name.ToLower().Trim() + "%");
+                cmd.Parameters.AddWithValue("@name", "%"+ Name.ToLower() + "%");
                 conn.Open();
                 var rs = cmd.ExecuteReader();
                 rs.Read();
@@ -97,7 +97,7 @@ namespace ProductManagement
                     {
                         Id = (int)rs["Id"],
                         Name = (string)rs["Name"],
-                        CreateDate = (DateTime)rs["CreatedDate"],
+                        CreateDate = (DateTime)rs["CreateDate"],
                         Price = (double)rs["Price"],
                         Status = (int)rs["Status"],
                         CategoryId = (int)rs["CategoryId"]

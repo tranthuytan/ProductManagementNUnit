@@ -13,14 +13,14 @@ namespace NUnitTest
         public void GetByIdTest_GetProduct()
         {
             //Assign
-            product.Id = 12;
-            product.Name = "red bull";
-            product.CreateDate = new DateTime(2022, 6, 13);
+            product.Id = 4;
+            product.Name = "Olong Tea";
+            product.CreateDate = new DateTime(2022, 6, 19);
             product.Price = 12000;
             product.Status = 1;
             product.CategoryId = 1;
             //Act
-            var dbProduct = productRepo.GetById(12);
+            var dbProduct = productRepo.GetById(4);
 
             //Expectation: dbProduct == product
             Assert.AreEqual(product.Id, dbProduct.Id);
@@ -86,7 +86,7 @@ namespace NUnitTest
 
             product.Name = "asdiaioshd iashdioashoiashdoiashdoia haoisdhaoishdaosihdaisohd aoisdhaoi";
             ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
-            Assert.That("The name must have [1,50] characterss", Is.EqualTo(ex.Message));
+            Assert.That("The name must have [1,50] characters", Is.EqualTo(ex.Message));
         }
         [Test]
         public void CreateProductTest_DateOutOfRange()
@@ -94,9 +94,9 @@ namespace NUnitTest
             //Assign
             //database id: int identity
             product = new Product();
-            product.Id = 14;
+            product.Id = 6;
             product.Name = "cafe lon";
-            product.CreateDate = new DateTime(2022, 6, 18);
+            product.CreateDate = new DateTime(2022, 7, 1);
             product.Price = 15000;
             product.Status = 1;
             product.CategoryId = 1;
@@ -126,7 +126,7 @@ namespace NUnitTest
             {
 
                 var argumentException = Assert.Throws<ArgumentException>(() => productRepo.Create(pro));
-                Assert.That("Invalid characters", Is.EqualTo(argumentException.Message));
+                Assert.That("The name has invalid characters", Is.EqualTo(argumentException.Message));
             }
         }
         [Test]
@@ -192,14 +192,14 @@ namespace NUnitTest
         public void GetByNameTest_GetProduct()
         {
             //Assign
-            product.Id = 12;
-            product.Name = "red bull";
-            product.CreateDate = new DateTime(2022, 6, 13);
+            product.Id = 5;
+            product.Name = "Olong Tea Plus";
+            product.CreateDate = new DateTime(2022, 6, 18);
             product.Price = 12000;
             product.Status = 1;
             product.CategoryId = 1;
             //Act
-            var dbProduct = productRepo.GetByName("red bull");
+            var dbProduct = productRepo.GetByName("a p");
 
             //Expectation: dbProduct == product
             Assert.AreEqual(product.Id, dbProduct.Id);
