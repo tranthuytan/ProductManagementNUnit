@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj": {}
+    "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj": {
+    "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj",
         "projectName": "NUnitTest",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\NUnitTest\\obj\\",
+        "projectPath": "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\NUnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj"
+              "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj": {
+                "projectPath": "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj"
               }
             }
           }
@@ -80,21 +80,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj": {
+    "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj",
         "projectName": "ProductManagement",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\SWT_Presentation1\\ProductManagementNUnit\\ProductManagement\\obj\\",
+        "projectPath": "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -144,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

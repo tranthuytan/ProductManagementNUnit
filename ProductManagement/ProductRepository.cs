@@ -86,8 +86,8 @@ namespace ProductManagement
                     throw new ArgumentException("The name has invalid characters");
 
                 SqlConnection conn = new SqlConnection(cs);
-                SqlCommand cmd = new SqlCommand("select Id,Name,CreateDate,Price,Status,CategoryId from Product WHERE Name LIKE @name AND Status=1", conn);
-                cmd.Parameters.AddWithValue("@name", "%"+ Name.ToLower() + "%");
+                SqlCommand cmd = new SqlCommand("select Id,Name,CreateDate,Price,Status,CategoryId from Product WHERE Name=@name AND Status=1", conn);
+                cmd.Parameters.AddWithValue("@name", Name.ToLower());
                 conn.Open();
                 var rs = cmd.ExecuteReader();
                 rs.Read();
