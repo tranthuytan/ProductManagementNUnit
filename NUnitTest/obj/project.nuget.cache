@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5k0q3iykVl7gadcQFsW/kb+cKC32jhB5e6Wpmt1DzcGQaYyj0Sc1obREGvrt2YW7DCtw80FoOtfXvB/MbSNrvw==",
+  "dgSpecHash": "h6pZnVihXx6h8AAUap6sjj+E7XMbzfg++28lrMe5B2y/w4f1WdZvQh2zORnzwm1L2zIdWxFwM8n4sfn4p7Tt7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\OneDrive\\Máy tính\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj",
+  "projectFilePath": "E:\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

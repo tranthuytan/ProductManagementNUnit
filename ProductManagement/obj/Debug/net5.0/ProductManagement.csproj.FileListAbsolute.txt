@@ -22,3 +22,15 @@ C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagemen
 C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\refint\ProductManagement.dll
 C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.pdb
 C:\Users\Admin\Desktop\SWT_Presentation1\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ref\ProductManagement.dll
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ProductManagement.deps.json
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ProductManagement.dll
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ref\ProductManagement.dll
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ProductManagement.pdb
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.csproj.AssemblyReference.cache
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.GeneratedMSBuildEditorConfig.editorconfig
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.AssemblyInfoInputs.cache
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.AssemblyInfo.cs
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.csproj.CoreCompileInputs.cache
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.dll
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ref\ProductManagement.dll
+E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.pdb

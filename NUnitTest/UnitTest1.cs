@@ -10,7 +10,8 @@ namespace NUnitTest
         Product product = new Product();
 
         [Test]
-        public void GetByIdTest_GetProduct()
+        [TestCase(5, "FrenchFries", "2022/8/10", 15000, 1, 1), Order(1)]
+        public void GetByIdTest_GetProduct(int id, string name, DateTime dt, double price, int sta, int ctid)
         {
             //Assign
             product.Id = 4;
@@ -45,12 +46,14 @@ namespace NUnitTest
 
         }
         [Test]
-        public void CreateProductTest_Success()
+        [TestCase("Olong tea"),Order(1)]
+        [TestCase("Revive")]
+        public void CreateProductTest_Success(string name)
         {
             //Assign
             //database id: int identity
             product.Id = 3;
-            product.Name = "Revive";
+            product.Name = name;
             product.CreateDate = new DateTime(2022, 6, 14);
             product.Price = 15000;
             product.Status = 1;
@@ -70,12 +73,14 @@ namespace NUnitTest
             Assert.AreEqual(product.CategoryId, dbProduct.CategoryId);
         }
         [Test]
-        public void CreateProductTest_NameRangeArgumentException()
+        [TestCase("asdiaioshd iashdioashoiashdoiashdoia haoisdhaoishdaosihdaisohd aoisdhaoi"), Order(1)]
+        [TestCase("                      ")]
+        public void CreateProductTest_NameRangeArgumentException(string name)
         {
             //Assign
             //database id: int identity
             product.Id = 14;
-            product.Name = "          ";
+            product.Name = name;
             product.CreateDate = new DateTime(2022, 6, 13);
             product.Price = 15000;
             product.Status = 1;
@@ -83,20 +88,18 @@ namespace NUnitTest
 
             var ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
             Assert.That("The name must have [1,50] characters", Is.EqualTo(ex.Message));
-
-            product.Name = "asdiaioshd iashdioashoiashdoiashdoia haoisdhaoishdaosihdaisohd aoisdhaoi";
-            ex = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
-            Assert.That("The name must have [1,50] characters", Is.EqualTo(ex.Message));
         }
         [Test]
-        public void CreateProductTest_DateOutOfRange()
+        [TestCase("2022/1/1"), Order(1)]
+        [TestCase("2022/2/2")]
+        public void CreateProductTest_DateOutOfRange(DateTime dt)
         {
             //Assign
             //database id: int identity
             product = new Product();
             product.Id = 6;
             product.Name = "cafe lon";
-            product.CreateDate = new DateTime(2022, 7, 1);
+            product.CreateDate = dt;
             product.Price = 15000;
             product.Status = 1;
             product.CategoryId = 1;
@@ -105,7 +108,9 @@ namespace NUnitTest
             Assert.That("The date must not exceed today", Is.EqualTo(ex.Message));
         }
         [Test]
-        public void CreateProductTest_NameSpecialCharacterException()
+        [TestCase("1123123"), Order(1)]
+        [TestCase("!@!@$%^^&*&*(*&*%$^%*_)(+_)")]
+        public void CreateProductTest_NameSpecialCharacterException(string name)
         {
             char[] invalidCharacters = "`~!@#$%^&*()_+=0123456789<>,.?/\\|{}[]'\"".ToCharArray();
             Boolean valid = true;
@@ -115,7 +120,7 @@ namespace NUnitTest
             dt = DateTime.Parse(s);
             Product pro = new Product()
             {
-                Name = "`~!@#$%^&*()_+=0123456789<>",
+                Name = name,
                 Price = 1000,
                 CreateDate = dt,
                 Status = 1,
@@ -130,11 +135,13 @@ namespace NUnitTest
             }
         }
         [Test]
-        public void GetByNameWithNameNotFound_GetNull()
+        [TestCase("red bull strike"), Order(1)]
+        [TestCase("revive preserved lemon")]
+        public void GetByNameWithNameNotFound_GetNull(string name)
         {
             //Assign
             product.Id = 12;
-            product.Name = "red bull Strike";
+            product.Name = name;
             product.CreateDate = new DateTime(2022, 6, 13);
             product.Price = 12000;
             product.Status = 1;
@@ -144,7 +151,9 @@ namespace NUnitTest
         }
 
         [Test]
-        public void GetByNameWithNameHasInvalidCharacters_GetException()
+        [TestCase("1123123"), Order(1)]
+        [TestCase("!@!@$%^^&*&*(*&*%$^%*_)(+_)")]
+        public void GetByNameWithNameHasInvalidCharacters_GetException(string name)
         {
             char[] invalidCharacters = "`~!@#$%^&*()_+=0123456789<>,.?/\\|{}[]'\"".ToCharArray();
             Boolean valid = true;
@@ -154,7 +163,7 @@ namespace NUnitTest
             dt = DateTime.Parse(s);
             Product pro = new Product()
             {
-                Name = "`~!@#$%^&*()_+=0123456789<>",
+                Name = name,
                 Price = 1000,
                 CreateDate = dt,
                 Status = 1,
@@ -163,19 +172,20 @@ namespace NUnitTest
             };
             if (pro.Name.IndexOfAny(invalidCharacters) >= 0)
             {
-
                 var argumentException = Assert.Throws<ArgumentException>(() => productRepo.GetByName(pro.Name));
                 Assert.That(argumentException.Message, Is.EqualTo("The name has invalid characters"));
             }
         }
 
         [Test]
-        public void GetByName_NameRangeArgumentException()
+        [TestCase("asdiaioshd iashdioashoiashdoiashdoia haoisdhaoishdaosihdaisohd aoisdhaoi"), Order(1)]
+        [TestCase("                      ")]
+        public void GetByName_NameRangeArgumentException(string name)
         {
             //Assign
             //database id: int identity
             product.Id = 14;
-            product.Name = "          ";
+            product.Name = name;
             product.CreateDate = new DateTime(2022, 6, 13);
             product.Price = 15000;
             product.Status = 1;
@@ -183,21 +193,19 @@ namespace NUnitTest
 
             var ex = Assert.Throws<ArgumentException>(() => productRepo.GetByName(product.Name));
             Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characters"));
-
-            product.Name = "asdiaioshd iashdioashoiashdoiashdoia haoisdhaoishdaosihdaisohd aoisdhaoi";
-            ex = Assert.Throws<ArgumentException>(() => productRepo.GetByName(product.Name));
-            Assert.That(ex.Message, Is.EqualTo("The name must have [1,50] characters"));
         }
         [Test]
-        public void GetByNameTest_GetProduct()
+        [TestCase(5,"Olong Tea Plus", "2022/6/8", 12000, 1, 1), Order(1)]
+        //[TestCase] need more test cases here.
+        public void GetByNameTest_GetProduct(int id, string name, DateTime dt, double price, int sta, int ctid)
         {
             //Assign
-            product.Id = 5;
-            product.Name = "Olong Tea Plus";
-            product.CreateDate = new DateTime(2022, 6, 18);
-            product.Price = 12000;
-            product.Status = 1;
-            product.CategoryId = 1;
+            product.Id = id;
+            product.Name = name;
+            product.CreateDate = dt;
+            product.Price = price;
+            product.Status = sta;
+            product.CategoryId = ctid;
             //Act
             var dbProduct = productRepo.GetByName("a p");
 
