@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest1\\NUnitTest1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj": {
+    "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest1\\NUnitTest1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj",
-        "projectName": "NUnitTest",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest\\NUnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest1\\NUnitTest1.csproj",
+        "projectName": "NUnitTest1",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest1\\NUnitTest1.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\NUnitTest1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

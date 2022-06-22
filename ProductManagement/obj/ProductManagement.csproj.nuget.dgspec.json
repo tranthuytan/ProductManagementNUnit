@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj": {}
   },
   "projects": {
-    "E:\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj": {
+    "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj",
         "projectName": "ProductManagement",
-        "projectPath": "E:\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "E:\\Coding Dreams\\SWT\\software-testing-master\\SWT_Presentation-main\\ProductManagementNUnit\\ProductManagement\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\ProductManagement\\ProductManagement.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\asd\\ProductManagementNUnit\\ProductManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

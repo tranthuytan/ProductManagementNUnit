@@ -20,8 +20,6 @@ namespace ProductManagement
                 throw new ArgumentException("The name must have [1,50] characters");
             if (entity.Name.IndexOfAny(invalidCharacters) >= 0)
                 throw new ArgumentException("The name has invalid characters");
-            if (entity.CreateDate.Date>now)
-                throw new ArgumentException("The date must not exceed today");
             if (entity.Price < 0)
                 throw new ArgumentException("The price must larger than or equal 0");
 

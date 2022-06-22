@@ -34,3 +34,15 @@ E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManage
 E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.dll
 E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ref\ProductManagement.dll
 E:\Coding Dreams\SWT\software-testing-master\SWT_Presentation-main\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.pdb
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ProductManagement.deps.json
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ProductManagement.dll
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\bin\Debug\net5.0\ProductManagement.pdb
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.AssemblyInfo.cs
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.dll
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\refint\ProductManagement.dll
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ProductManagement.pdb
+C:\Users\Admin\Desktop\asd\ProductManagementNUnit\ProductManagement\obj\Debug\net5.0\ref\ProductManagement.dll
