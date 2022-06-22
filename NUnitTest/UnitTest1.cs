@@ -24,6 +24,8 @@ namespace NUnitTest
         }
         [Test,Order(1)]
         [TestCase(5, "Olong Tea Plus", "2022/06/18", 12000, 1, 1)]
+        [TestCase(6, "cafe lon", "2022/06/18", 15000, 1, 1)]
+
         public void GetByIdTest_GetProduct(int id, string name, DateTime dt, double price, int sta, int ctid)
         {
             //System.Threading.Thread.Sleep(2000);
@@ -35,7 +37,7 @@ namespace NUnitTest
             product.Status = 1;
             product.CategoryId = 1;
             //Act
-            var dbProduct = productRepo.GetById(5);
+            var dbProduct = productRepo.GetById(id);
 
             //Expectation: dbProduct == product
             Assert.AreEqual(product.Id, dbProduct.Id);
@@ -58,6 +60,7 @@ namespace NUnitTest
             product.CategoryId = 1;
 
             Assert.AreEqual(null, productRepo.GetById(product.Id));
+            System.Threading.Thread.Sleep(2000);
 
         }
         //[Test]
@@ -113,19 +116,16 @@ namespace NUnitTest
 
             DateTime dt = new DateTime();
             dt = DateTime.Parse(s);
-            Product pro = new Product()
-            {
-                Name = name,
-                Price = 1000,
-                CreateDate = dt,
-                Status = 1,
-                CategoryId = 1,
+            product.Name = name;
+            product.Price = 1000;
+            product.CreateDate = dt;
+            product.Status = 1;
+            product.CategoryId = 1;
 
-            };
-            if (pro.Name.IndexOfAny(invalidCharacters) >= 0)
+            if (product.Name.IndexOfAny(invalidCharacters) >= 0)
             {
 
-                var argumentException = Assert.Throws<ArgumentException>(() => productRepo.Create(pro));
+                var argumentException = Assert.Throws<ArgumentException>(() => productRepo.Create(product));
                 Assert.That("The name has invalid characters", Is.EqualTo(argumentException.Message));
             }
         }
